@@ -7,7 +7,7 @@ export default function LocalSwitcher() {
   const locale = useCurrentLocale();
 
   return (
-    <div className="flex xs:justify-center justify-end relative xs:mt-3 md:mt-0 md:ml-3">
+    <div className="flex xxs:justify-center justify-end relative xxs:mt-3 md:mt-0 md:ml-3">
       <button
         title="swtich to english"
         className="bg-purple-700  hover:bg-purple-300 hover:text-black
