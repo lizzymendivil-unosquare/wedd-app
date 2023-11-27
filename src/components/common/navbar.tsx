@@ -9,9 +9,9 @@ import { NAV_ITEMS } from "@/lib/constants";
 import LocalSwitcher from "../locale/locale-switcher";
 import { useScopedI18n } from "@/locales/client";
 import Avatar from "../admin/avatar";
-import AvatarWrapper from "../admin/avatar-wrapper";
+import { SessionProps } from "@/lib/props";
 
-export default function Navbar({ session }: { session?: {} }) {
+export default function Navbar({ session = {} }: SessionProps) {
   const [navbar, setNavbar] = useState(false);
   const pathname = usePathname();
   const params = useParams();

@@ -2,7 +2,7 @@
 
 import { toast } from "react-hot-toast";
 
-import createPost from "@/actions/create-post";
+// import createPost from "@/actions/create-post";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 // import { MessageSchema } from "@/lib/types";
@@ -27,9 +27,9 @@ export default function CreatePost({ id }: { id: string }) {
           setForm(data);
         });
     }
-  }, []);
+  }, [id]);
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
@@ -40,7 +40,7 @@ export default function CreatePost({ id }: { id: string }) {
     router.push("/admin/blog");
   };
 
-  const handleSubmit = async (e: HTMLFormElement) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     // const title = e.target.title.value;
     // // const slug = e.target.slug?.value;

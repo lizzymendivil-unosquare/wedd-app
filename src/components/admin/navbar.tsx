@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
 import Avatar from "./avatar";
-import AvatarWrapper from "./avatar-wrapper";
+import { SessionProps } from "@/lib/props";
 
 interface linkProps {
   name: string;
@@ -17,7 +17,7 @@ const links: linkProps[] = [
   { name: "Blog", href: "/admin/blog" },
 ];
 
-export default function Navbar({ session }) {
+export default function Navbar({ session }: SessionProps) {
   const pathName = usePathname();
   const params = useParams();
 
@@ -54,7 +54,6 @@ export default function Navbar({ session }) {
         </div>
         <div className="flex items-center gap-x-8">
           <Avatar session={session} />
-          {/* <AvatarWrapper /> */}
         </div>
       </div>
     </div>

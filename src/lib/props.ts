@@ -21,5 +21,5 @@ export type UserProps = {
 };
 
 export type SessionProps = {
-  user?: UserProps;
+  session?: { user?: UserProps };
 };

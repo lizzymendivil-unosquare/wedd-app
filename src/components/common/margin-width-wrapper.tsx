@@ -4,13 +4,14 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/utils/auth";
+import { SessionProps } from "@/lib/props";
 
 export default async function MarginWidthWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
+  const session: any = await getServerSession(authOptions);
 
   return (
     <>

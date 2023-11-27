@@ -14,7 +14,7 @@ export default async function AdminLayout({
   params: { locale: string };
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
+  const session: any = await getServerSession(authOptions);
   return (
     <I18nProviderClient locale={locale}>
       {/* <MarginWidthWrapper>

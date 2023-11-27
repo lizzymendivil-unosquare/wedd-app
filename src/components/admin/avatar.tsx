@@ -8,7 +8,7 @@ import { useState } from "react";
 import user from "../../../public/user.png";
 import { SessionProps } from "@/lib/props";
 
-export default function Avatar({ session }: SessionProps) {
+export default function Avatar({ session = {} }: SessionProps) {
   const [isOpen, setIsOpen] = useState(false);
   // const options: string[] = ["Log out", "Second", "Third"];
   console.log("session! ", session);

@@ -11,7 +11,7 @@ export default async function MainLayout({
   params: { locale: string };
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
+  const session: any = await getServerSession(authOptions);
 
   return (
     <I18nProviderClient locale={locale}>
