@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import MarginWidthWrapper from "@/components/common/margin-width-wrapper";
 import PageWrapper from "@/components/common/page-wrapper";
