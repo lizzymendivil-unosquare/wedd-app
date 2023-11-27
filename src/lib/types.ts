@@ -32,7 +32,7 @@ export type NavItem = {
   title: string;
   path: string;
   icon?: JSX.Element;
-  key: "home" | "story" | "wedding" | "guestbook" | "gallery";
+  key: "home" | "story" | "wedding" | "guestbook" | "gallery" | "blog";
 };
 
 export type UploadResult = {

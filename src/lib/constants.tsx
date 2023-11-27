@@ -33,4 +33,10 @@ export const NAV_ITEMS: NavItem[] = [
     icon: <Icon icon="mdi-light:home" />,
     key: "guestbook",
   },
+  {
+    title: "Blog",
+    path: "/blog",
+    icon: <Icon icon="mdi-light:home" />,
+    key: "blog",
+  },
 ];

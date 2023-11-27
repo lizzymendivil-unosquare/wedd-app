@@ -1,14 +1,10 @@
-import { Metadata } from "next";
+// "use client";
 
 import MarginWidthWrapper from "@/components/common/margin-width-wrapper";
 import PageWrapper from "@/components/common/page-wrapper";
 import { I18nProviderClient } from "@/locales/client";
 
-export const metadata: Metadata = {
-  title: "The Wedding",
-};
-
-export default function WeddingLayout({
+export default function BlogLayout({
   params: { locale },
   children,
 }: {

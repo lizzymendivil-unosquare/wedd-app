@@ -17,6 +17,7 @@ export default {
     wedding: "The Wedding",
     gallery: "Gallery",
     guestbook: "Guest Book",
+    blog: "Blog",
   },
   guestbook: {
     title: "Guest Book",
@@ -68,6 +69,9 @@ export default {
     story_seventh_date: "December 30th, 2023",
     story_seventh_description:
       "This is not the final part of our story. on the contrary, this will be the day our story begins.",
+  },
+  blog: {
+    title: "Blog",
   },
   footer: {
     text: "We are in love and getting married",

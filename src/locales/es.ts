@@ -17,6 +17,7 @@ export default {
     wedding: "La Boda",
     gallery: "Galeria",
     guestbook: "Libro de Visitas",
+    blog: "Blog",
   },
   guestbook: {
     title: "Libro de Visitas",
@@ -42,11 +43,11 @@ export default {
     story_first: "Nos conocimos",
     story_first_date: "16 de Abril, 2022",
     story_first_description:
-      "We started talking about how was the Memorial. His was in the KH and mine was in a rented venue.",
+      "Empezamos a hablar de cómo fue el Memorial. El suyo fue en el Salon del Reino y el mío en un local alquilado.",
     story_second: "Empezamos a noviar",
     story_second_date: "9 de Mayo, 2022",
     story_second_description:
-      "After analyzing our situation, we decided to make our relationship official and told our families.",
+      "Tras analizar nuestra situación, decidimos oficializar nuestra relación y se lo comunicamos a nuestras familias.",
     story_third:
       "Nos vimos en persona por primera vez en Grand Central Station en NYC",
     story_third_date: "12 de Septiembre, 2022",
@@ -68,6 +69,9 @@ export default {
     story_seventh_date: "30 de Diciembre, 2023",
     story_seventh_description:
       "Esta no es la parte final de nuestra historia, al contrario, nuestra historia empieza aqui.",
+  },
+  blog: {
+    title: "Blog",
   },
   footer: {
     text: "Estamos enamorados y nos vamos a casar",

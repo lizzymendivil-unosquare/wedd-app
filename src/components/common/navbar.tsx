@@ -1,17 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 
 import { NAV_ITEMS } from "@/lib/constants";
 import LocalSwitcher from "../locale/locale-switcher";
 import { useScopedI18n } from "@/locales/client";
+import Avatar from "../admin/avatar";
+import AvatarWrapper from "../admin/avatar-wrapper";
 
-export default function Navbar() {
+export default function Navbar({ session }: { session?: {} }) {
   const [navbar, setNavbar] = useState(false);
   const pathname = usePathname();
+  const params = useParams();
   const t = useScopedI18n("navbar");
 
   return (
@@ -64,7 +67,9 @@ export default function Navbar() {
                         href={item.path}
                         onClick={() => setNavbar(!Navbar)}
                         className={`text-sm lg:text-lg transition duration-700${
-                          item.path === pathname ? "text-purple-600" : ""
+                          "/" + params.locale + item.path === pathname
+                            ? " text-purple-600"
+                            : ""
                         }`}
                       >
                         {t(`${item.key}`)}
@@ -73,6 +78,8 @@ export default function Navbar() {
                   );
                 })}
                 <LocalSwitcher />
+                <Avatar session={session} />
+                {/* <AvatarWrapper /> */}
               </div>
             </div>
           </div>

@@ -3,22 +3,38 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const messages = await prisma.guestbook.findMany();
+  // const messages = await prisma.guestbook.findMany();
 
-  return NextResponse.json(messages);
+  // return NextResponse.json(messages);
+
+  const posts = await prisma.post.findMany();
+
+  return NextResponse.json(posts);
 }
 
 export async function POST(request) {
-  const { name, message, isPrivate } = await request.json();
-  const newMessage = await prisma.guestbook.create({
+  // const { name, message, isPrivate } = await request.json();
+  // const newMessage = await prisma.guestbook.create({
+  //   data: {
+  //     name,
+  //     message,
+  //     isPrivate,
+  //   },
+  // });
+
+  // return NextResponse.json(newMessage);
+  const { title, slug, author, mainImage, body } = await request.json();
+  const newPost = await prisma.post.create({
     data: {
-      name,
-      message,
-      isPrivate,
+      title,
+      slug,
+      author,
+      mainImage,
+      body,
     },
   });
 
-  return NextResponse.json(newMessage);
+  return NextResponse.json(newPost);
 }
 
 export function PUT() {

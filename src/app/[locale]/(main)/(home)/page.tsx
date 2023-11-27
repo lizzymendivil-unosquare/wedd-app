@@ -1,11 +1,21 @@
 import { Sedgwick_Ave_Display } from "next/font/google";
 import Image from "next/image";
+import { getServerSession } from "next-auth";
 
 import { getScopedI18n } from "@/locales/server";
+import { authOptions } from "@/app/utils/auth";
+import { redirect } from "next/navigation";
 
 const sedgwickAveDisplay = Sedgwick_Ave_Display({ subsets: [], weight: "400" });
 
 export default async function MainPage() {
+  // const session = await getServerSession(authOptions);
+  // if (!session) {
+  //   return redirect("/login");
+  // } else {
+  //   console.log("****session ", session);
+  //   // return redirect("/");
+  // }
   const t = await getScopedI18n("main");
 
   return (
@@ -34,6 +44,7 @@ export default async function MainPage() {
         <div className="lg:pl-8 lg:w-1/2">
           <Image
             src="/lizzy-and-braden-cover.jpg"
+            priority
             alt="lizzy and braden cover image"
             width="1600"
             height="1059"
